@@ -1,3 +1,7 @@
+schedule clear purge:prep_tick
+bossbar set purge.timer visible false
+scoreboard players set purge.timer purge.accumulator 7200
+
 worldborder set 500 1800
 team modify purge friendlyFire true
 gamerule keepInventory false
@@ -6,10 +10,6 @@ difficulty hard
 
 scoreboard players set @a purge.deaths 0
 scoreboard players set @a purge.inDeathmatch 1
-
-schedule clear purge:prep_tick
-
-bossbar set purge.timer visible false
 
 playsound minecraft:item.goat_horn.sound.2 master @a ~ ~ ~ 400
 
