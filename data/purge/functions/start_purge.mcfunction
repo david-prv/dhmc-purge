@@ -29,4 +29,4 @@ tellraw @a ""
 tellraw @a ""
 
 schedule function purge:prep_tick 1s
-schedule function purge:start_dm 7200s
+#> schedule function purge:start_dm 7200s
