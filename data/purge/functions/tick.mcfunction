@@ -1,4 +1,5 @@
 team join purge @a
+bossbar set purge.timer players @a
 
 execute as @a[scores={purge.isAdmin=1..,purge.start=1..}] run function purge:start_purge
 execute as @a[scores={purge.isAdmin=1..,purge.stop=1..}] run function purge:stop_purge
