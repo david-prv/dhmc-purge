@@ -12,6 +12,7 @@ scoreboard players set @a purge.deaths 0
 scoreboard players set @a purge.inDeathmatch 0
 
 clear @a
+bossbar set purge.timer visible true
 playsound minecraft:item.goat_horn.sound.5 master @a ~ ~ ~ 400
 execute as @a run function player_tracker:players/give_compass
 
@@ -27,5 +28,5 @@ tellraw @a ""
 tellraw @a ""
 tellraw @a ""
 
+schedule function purge:prep_tick 1s
 schedule function purge:start_dm 7200s
-#> schedule function purge:start_dm 30s
