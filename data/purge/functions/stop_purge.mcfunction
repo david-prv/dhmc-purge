@@ -9,6 +9,13 @@ difficulty peaceful
 scoreboard players set @a purge.inDeathmatch 0
 scoreboard players set @a purge.deaths 0
 
+bossbar set purge.timer visible false
+bossbar set purge.timer value 7200
+bossbar set purge.timer name "Deathmatch starts in ..."
+
+schedule clear purge:prep_tick
+scoreboard players set purge.timer purge.accumulator 7200
+
 playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 400
 
 clear @a
